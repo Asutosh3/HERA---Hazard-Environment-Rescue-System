@@ -130,3 +130,36 @@ GPS Module
         │
         ▼
  Rescue Personnel
+Camera Integration
+
+The Flutter application includes a dedicated video streaming interface designed for ESP32-CAM integration. The software infrastructure required for real-time video monitoring has been implemented and validated within the application.
+
+Physical integration of the ESP32-CAM module is planned as a future enhancement to improve situational awareness during rescue operations.
+
+Applications-
+
+Disaster Response Operations
+Search and Rescue Missions
+Industrial Hazard Inspection
+Toxic Gas Detection
+Fire Accident Assessment
+Mine Safety Monitoring
+Chemical Plant Inspection
+Remote Environmental Surveillance
+
+Future Scope-
+
+ESP32-CAM Integration
+Live Video Streaming
+Obstacle Avoidance
+Autonomous Navigation
+AI-Based Hazard Detection
+Cloud Data Logging
+Battery Health Monitoring
+Multi-Rover Coordination
+
+Author-
+
+Asutosh Aum
+Electronics and Communication Engineering
+IoT • Embedded Systems • Edge Computing • Mobile Development
