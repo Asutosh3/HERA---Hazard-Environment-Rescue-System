@@ -1,16 +1,165 @@
-# rover_control_app
+# HERA – Hazard Environment Rescue Assistant
 
-A new Flutter project.
+An IoT-enabled rescue assistance rover designed for operation in hazardous and inaccessible environments. HERA enables rescue personnel to remotely navigate a rover while monitoring environmental conditions such as gas concentration, temperature, humidity, ambient sound, and geographical location through a Flutter-based mobile application.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Project Overview
 
-A few resources to get you started if this is your first Flutter project:
+Hazardous environments such as disaster zones, collapsed structures, industrial accident sites, chemical leak areas, and fire-affected regions pose significant risks to rescue personnel.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+HERA (Hazard Environment Rescue Assistant) is developed to provide remote situational awareness before human intervention. The system combines wireless rover navigation, environmental monitoring, GPS tracking, and real-time data visualization into a single platform.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The rover collects environmental data and transmits it over WiFi to a Flutter-based mobile application, allowing operators to assess site conditions remotely.
+
+---
+
+## Key Features
+
+- Remote Rover Navigation
+- GPS-Based Location Tracking
+- Hazardous Gas Detection (MQ2)
+- Temperature Monitoring (DHT11)
+- Humidity Monitoring (DHT11)
+- Sound Detection
+- LED Illumination Control
+- Emergency Stop System
+- WiFi-Based Communication
+- Real-Time Mobile Dashboard
+- ESP32-CAM Streaming Interface Ready
+
+---
+
+## Hardware Components
+
+| Component | Purpose |
+|------------|----------|
+| ESP32 Dev Module | Main Controller |
+| MQ2 Gas Sensor | Gas Detection |
+| DHT11 Sensor | Temperature & Humidity |
+| Sound Sensor | Ambient Sound Monitoring |
+| NEO-6M GPS Module | Location Tracking |
+| L298N Motor Driver | Motor Control |
+| DC Motors | Rover Locomotion |
+| Buck Converter | Power Regulation |
+| LED Module | Illumination |
+
+---
+
+## Software Stack
+
+- Flutter
+- Dart
+- Arduino IDE
+- ESP32 Web Server
+- TinyGPS++
+- DHT Sensor Library
+- HTTP Communication
+
+---
+
+## System Architecture
+
+![Architecture](docs/rover_architecture.png)
+
+---
+
+## Hardware Prototype
+
+### Rover Assembly
+
+![Rover](hardware/rover_comp.jpeg)
+
+### Circuit Diagram
+
+![Circuit](hardware/rover_circuit.jpeg)
+
+---
+
+## Mobile Application
+
+![App UI](docs/app_ui.jpg)
+
+The Flutter application provides:
+
+- Directional Rover Control
+- Joystick-Based Navigation
+- GPS Coordinates Display
+- Gas Monitoring
+- Temperature Monitoring
+- Humidity Monitoring
+- LED Control
+- Emergency Stop Function
+
+---
+
+## Working Model
+
+![Working Model](docs/final_working_model.jpeg)
+
+---
+
+## Communication Workflow
+
+```text
+MQ2 Sensor
+DHT11 Sensor
+Sound Sensor
+GPS Module
+        │
+        ▼
+      ESP32
+        │
+        ├── Sensor Processing
+        ├── GPS Processing
+        ├── Motor Control
+        ├── LED Control
+        └── HTTP Server
+        │
+        ▼
+     WiFi Network
+        │
+        ▼
+ Flutter Mobile App
+        │
+        ├── Dashboard
+        ├── GPS Tracking
+        ├── Rover Controls
+        ├── LED Controls
+        └── Camera Interface
+        │
+        ▼
+ Rescue Personnel
+Camera Integration
+
+The Flutter application includes a dedicated video streaming interface designed for ESP32-CAM integration. The software infrastructure required for real-time video monitoring has been implemented and validated within the application.
+
+Physical integration of the ESP32-CAM module is planned as a future enhancement to improve situational awareness during rescue operations.
+
+Applications-
+
+Disaster Response Operations
+Search and Rescue Missions
+Industrial Hazard Inspection
+Toxic Gas Detection
+Fire Accident Assessment
+Mine Safety Monitoring
+Chemical Plant Inspection
+Remote Environmental Surveillance
+
+Future Scope-
+
+ESP32-CAM Integration
+Live Video Streaming
+Obstacle Avoidance
+Autonomous Navigation
+AI-Based Hazard Detection
+Cloud Data Logging
+Battery Health Monitoring
+Multi-Rover Coordination
+
+Author-
+
+Asutosh Aum
+Electronics and Communication Engineering
+IoT • Embedded Systems • Edge Computing • Mobile Development
